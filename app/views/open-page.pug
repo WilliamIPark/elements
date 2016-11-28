@@ -1,0 +1,39 @@
+html
+  head
+    // Meta information
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Lets Learn Elements
+
+    // Stylesheets
+    link(rel='stylesheet', type='text/css', href='css/main.css')
+    link(rel='stylesheet', type='text/css', href='css/type.css')
+    link(rel='stylesheet', type='text/css', href='css/animate.css')
+
+    //JQuery
+    script(src='js/jquery-3.1.1.min.js')
+    script(src='js/intro-page.js')
+
+    // Typekit
+    script(src='https://use.typekit.net/fvf8ojr.js')
+    script.
+      try{Typekit.load({ async: true });}catch(e){}
+
+    // Particle-JS
+    script(src='js/particles.min.js')
+    script.
+      particlesJS.load('particles-js', 'misc/particles.json', function() {
+      console.log('particles.js config loaded');
+      });
+
+  body
+    div#particles-js
+    section#centered-box.animated.zoomIn
+      h1.uppercase Lets Learn Elements
+      h3.
+        Before we begin, what should I call you?
+      form(id="name-form", method="post", action="index")
+        input(id="name-input" type="text" name="firstname" placeholder="First Name" autocomplete="off")
+        div
+          input(id="continue-button" type="submit" value="Continue")
+          input(id="skip-button" type="submit" value="Skip")

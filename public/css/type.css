@@ -1,0 +1,31 @@
+h1, h2{
+    font-family: "futura-pt", sans-serif;
+}
+
+h3, h4 {
+  font-family: "mr-eaves-modern", sans-serif;
+}
+
+h1 {
+  font-size: 3.157em;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 2.369em;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 1.777em;
+  font-weight: normal;
+}
+
+p {
+  font-family: "mr-eaves-modern", sans-serif;
+  font-size: 1.4em;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
