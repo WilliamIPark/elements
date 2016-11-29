@@ -94,8 +94,8 @@ body {
   height: 100vh;
   width: 75vw;
   background-color: white;
-  transform: skew(-10deg) !important;
   z-index: -1;
+  transform: skew(-10deg) !important;
 }
 
 .flex-right {
@@ -138,6 +138,7 @@ body {
   flex-direction: column;
   flex-flow: center;
   float:right;
+  margin: 10px;
 }
 
 .element h2 {
@@ -200,4 +201,24 @@ body {
 
 #user-box p:first-of-type {
   color: #348899
+}
+
+#atom-wrap {
+  position: fixed;
+  right: -10%;
+  top: 0;
+  height: 100vh;
+  width: 75vw;
+  z-index: -2;
+}
+
+#nucleus {
+  position: relative;
+  top: 40%;
+  right: 8%;
+  background-color: #962D3E;
+  color: white;
+  height: 250px;
+  width: 250px;
+  border-radius: 125px;
 }
