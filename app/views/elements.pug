@@ -29,8 +29,12 @@ html
   body
     div#particles-js
     aside#user-box.animated.fadeInDown
-      p#welcome Welcome, scientist!
-      p#points Points: 0
+      if firstname != null
+        p#welcome= "Welcome, " + firstname +"!"
+      else
+        p#welcome Welcome, scientist!
+      if points != null
+        p#points= "Points: " + points
     div#atom-large-wrap
       div#atom-wrap.animated.zoomIn
         div#nucleus
@@ -70,3 +74,18 @@ html
 
           button#next-page.btn-next-page
             div.arrow-down
+        section
+          article
+            header
+              h3 Quiz
+            div#quiz-wrap
+              p#question How many different elements are there?
+              section
+                form#quiz-form
+                  input(type="radio", name="quiz", value="100")
+                  label(for="100") 100
+                  input(type="radio", name="quiz", value="50")
+                  label(for="50") 50
+                  input(type="radio", name="quiz", value="77")
+                  label(for="77") 77
+                  input(type="submit", value="Submit")

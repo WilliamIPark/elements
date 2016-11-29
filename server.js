@@ -3,12 +3,8 @@ var express = require('express');
 var app = express();
 var path = require('path');
 var bodyParser = require('body-parser');
+var cookieParser = require('cookie-parser');
 var session = require('express-session');
-
-var data = {
-  username: null,
-  points: 0
-};
 
 //Set view engine as pug/jade
 app.set('views', './app/views')
@@ -23,35 +19,42 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 }));
 
+//Cookies
+app.use(cookieParser());
+
 ///////////
 //Routing//
 ///////////
 
 //Index
 app.get('/', function(req,res){
-  res.render('open-page', data);
+  res.render('open-page');
 });
 
 app.get('/elements', function(req, res){
+  //If there is a profile, send in the cookie details:
+  if(req.cookies.firstname != null) {
+      res.render('elements', {
+        firstname: req.cookies.firstname,
+        points: req.cookies.points
+      });
+  }
+  //Otherwise send nothing.
   res.render('elements', null);
+});
+
+//Register the cookie
+app.get('/register', function(req, res) {
+  res.cookie('name', 'william').send('Cookie is set');
 });
 
 app.post('/register', function(req, res) {
   //If a name exists
   if(req.body.firstname != "") {
-    
+    res.cookie('firstname', req.body.firstname);
+    res.cookie('points', 0);
   }
-});
-
-app.post('/elements', function(req, res) {
-  if(req.body.firstname != "") {
-    console.log(req.body.firstname);
-    data.username = req.body.firstname;
-  } else {
-    console.log("Empty name.");
-    res.redirect('/elements');
-  }
-  res.render('elements', data);
+  res.redirect('/elements');
 });
 
 //Start server

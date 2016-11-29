@@ -5,8 +5,17 @@ body {
   display: flex;
 }
 
+::selection {
+  background: #348899; /* WebKit/Blink Browsers */
+  color: white;
+}
+::-moz-selection {
+  background: #348899; /* Gecko Browsers */
+  color: white;
+}
+
 #particles-js {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   background-color: #343642;
@@ -182,6 +191,9 @@ body {
 }
 
 #user-box {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 300px;
   height: 60px;
   background-color: white;
