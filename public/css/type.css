@@ -33,6 +33,16 @@ p {
   color: #343642;
 }
 
+li {
+  font-family: "mr-eaves-modern", sans-serif;
+  font-size: 1.3em;
+  color: #343642;
+}
+
+input[type=submit] {
+  font-family: "mr-eaves-modern", sans-serif;
+}
+
 .uppercase {
   text-transform: uppercase;
 }

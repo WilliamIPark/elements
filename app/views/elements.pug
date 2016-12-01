@@ -8,6 +8,7 @@ html
     // Stylesheets
     link(rel='stylesheet', type='text/css', href='css/main.css')
     link(rel='stylesheet', type='text/css', href='css/type.css')
+    link(rel='stylesheet', type='text/css', href='css/quiz.css')
     link(rel='stylesheet', type='text/css', href='css/animate.css')
 
     //JQuery
@@ -80,12 +81,16 @@ html
               h3 Quiz
             div#quiz-wrap
               p#question How many different elements are there?
-              section
                 form#quiz-form
-                  input(type="radio", name="quiz", value="100")
-                  label(for="100") 100
-                  input(type="radio", name="quiz", value="50")
-                  label(for="50") 50
-                  input(type="radio", name="quiz", value="77")
-                  label(for="77") 77
-                  input(type="submit", value="Submit")
+                  ul
+                    li
+                      input(type="radio", id="a1", name="quiz", value="100")
+                      label(for="a1") 100
+                    li
+                      input(type="radio", id="a2", name="quiz", value="50")
+                      label(for="a2") 50
+                    li
+                      input(type="radio", id="a3", name="quiz", value="77")
+                      label(for="a3") 77
+                    li
+                      input(type="submit", value="Submit")
