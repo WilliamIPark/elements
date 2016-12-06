@@ -15,6 +15,9 @@ html
     script(src='js/jquery-3.1.1.min.js')
     script(src='js/intro-page.js')
 
+    //Quiz
+    script(src="js/quiz.js")
+
     // Typekit
     script(src='https://use.typekit.net/fvf8ojr.js')
     script.
@@ -83,14 +86,5 @@ html
               p#question How many different elements are there?
                 form#quiz-form
                   ul
-                    li
-                      input(type="radio", id="a1", name="quiz", value="100")
-                      label(for="a1") 100
-                    li
-                      input(type="radio", id="a2", name="quiz", value="50")
-                      label(for="a2") 50
-                    li
-                      input(type="radio", id="a3", name="quiz", value="77")
-                      label(for="a3") 77
                     li
                       input(type="submit", value="Submit")
