@@ -1,0 +1,119 @@
+html
+  head
+    // Meta information
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Lets Learn Elements
+
+    // Stylesheets
+    link(rel='stylesheet', type='text/css', href='css/main.css')
+    link(rel='stylesheet', type='text/css', href='css/type.css')
+    link(rel='stylesheet', type='text/css', href='css/animate.css')
+    link(rel='stylesheet', type='text/css', href='css/atom-structure.css')
+
+    //JQuery
+    script(src='js/jquery-3.1.1.min.js')
+
+    // Typekit
+    script(src='https://use.typekit.net/fvf8ojr.js')
+    script.
+      try{Typekit.load({ async: true });}catch(e){}
+
+  body
+    aside#user-box.animated.fadeInDown
+      if firstname != null
+        p#welcome= "Welcome, " + firstname +"!"
+      else
+        p#welcome Welcome, scientist!
+      if points != null
+        p#points= "Points: " + points
+    div#atom-large-wrap
+      div#atom-wrap.animated.zoomIn
+        div#nucleus
+        img(src="img/inner-ring.png")#inner-ring
+        img(src="img/outer-ring.png")#outer-ring
+    div#slanted-bg.animated.fadeInRight
+    div.flex-right.animated.fadeInRight
+      main#main-article
+        header
+          h1.uppercase Lets Learn Elements
+          h2.uppercase Element Selection
+        section
+          article
+            header
+              if firstname != null
+                h3= "Please pick an element to learn, " + firstname + "."
+              else
+                h3 Please pick an element to learn.
+
+            ul#element-list
+
+              a.element-link(href="#")
+                li
+                  div.full-structure
+                    div.ring-3.spin
+                      div.small-nucleus
+                      div.atoms
+                        div.atom.ring-3-top
+                        div.atom.ring-3-bottom
+                  h3 Helium
+
+              a(href="#")
+                li
+                  div.full-structure
+                    div.ring-3.spin
+                      div.atoms
+                        div.atom.ring3-bottomright
+                      div.ring-1.spin-reverse
+                        div.small-nucleus
+                        div.atoms
+                          div.atom.ring1-top
+                          div.atom.ring1-bottom
+                  h3 Lithium
+
+              a(href="#")
+                li
+                  div.full-structure
+                    div.ring-3.spin
+                      div.small-nucleus
+                      div.atoms
+                        div.atom.ring-3-top
+                  h3 Hydrogen
+
+              a(href="#")
+                li
+                  div.full-structure
+                    div.ring-3.spin
+                      div.atoms
+                        div.atom#sodium-ring3-top
+                      div.ring-2.spin-reverse
+                        div.atoms
+                          div.atom#sodium-ring2-top1
+                          div.atom#sodium-ring2-top2
+                          div.atom#sodium-ring2-right1
+                          div.atom#sodium-ring2-right2
+                          div.atom#sodium-ring2-bottom1
+                          div.atom#sodium-ring2-bottom2
+                          div.atom#sodium-ring2-left1
+                          div.atom#sodium-ring2-left2
+                        div.ring-0.spin-triple
+                          div.atoms
+                            div.atom#sodium-ring0-top
+                            div.atom#sodium-ring0-bottom
+                          div.small-nucleus
+                  h3 Sodium
+              a(href="#")
+                li
+                  div.full-structure
+                    div.ring-3.spin
+                      div.atoms
+                        div.atom#carbon-top
+                        div.atom#carbon-right
+                        div.atom#carbon-bottom
+                        div.atom#carbon-left
+                      div.ring-1.spin-reverse
+                        div.small-nucleus
+                        div.atoms
+                          div.atom.ring1-top
+                          div.atom.ring1-bottom
+                  h3 Carbon

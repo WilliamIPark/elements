@@ -34,18 +34,14 @@ app.get('/', function(req,res){
 app.get('/elements', function(req, res){
   //If there is a profile, send in the cookie details:
   if(req.cookies.firstname != null) {
-      res.render('elements', {
+      res.render('new-elements', {
         firstname: req.cookies.firstname,
         points: req.cookies.points
       });
+  } else {
+    //Otherwise send nothing.
+    res.render('new-elements', null);
   }
-  //Otherwise send nothing.
-  res.render('elements', null);
-});
-
-//Register the cookie
-app.get('/register', function(req, res) {
-  res.cookie('name', 'william').send('Cookie is set');
 });
 
 app.post('/register', function(req, res) {

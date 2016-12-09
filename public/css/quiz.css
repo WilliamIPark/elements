@@ -51,11 +51,10 @@
 }
 
 #quiz-form ul li input[type=submit] {
-  width: 100%;
+  width: 50%;
   font-size: 1.0em;
   padding: 10px;
   margin: 0;
-  border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   border: 0;
   background-color: #348899;
@@ -66,6 +65,70 @@
 }
 
 #quiz-form ul li input[type=submit]:hover {
+  background-color: #1b5a68;
+}
+
+#quiz-form ul li button {
+  font-family: "mr-eaves-modern", sans-serif;
+  width: 50%;
+  font-size: 1.0em;
+  padding: 10px;
+  margin: 0;
+  border-bottom-right-radius: 10px;
+  border: 0;
+  background-color: #962D3E;
+  color: white;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  outline: none;
+}
+
+#quiz-form ul li button:hover {
+  background-color: #59131e;
+}
+
+#quiz-form ul li:hover input{
   font-size: 1.2em;
-  background-color: #2b7b8c;
+}
+
+#quiz-form ul li:hover button{
+  font-size: 1.2em;
+}
+
+#quiz-wrap {
+  position: relative;
+  top: -400px;
+}
+
+#quiz-cover {
+  position: relative;
+  left:0;
+  top: 0;
+  background: #343642;
+  height: 400px;
+  width:100%;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+#cover-button {
+  font-family: "mr-eaves-modern", sans-serif;
+  font-size: 1.6em;
+  background: none;
+  border: 3px solid white;
+  color: white;
+  padding: 1em 2em;
+  border-radius: 10px;
+  outline: none;
+  transition: all 0.3s cubic-bezier(.87,-.41,.19,1.44);
+  cursor: pointer;
+}
+
+#cover-button:hover {
+  background: white;
+  color: #343642;
+  transform:scale(1.1);
 }

@@ -49,9 +49,7 @@ var quiz1 = new Quiz("elements", q1_questions);
 
 
 
-//QUIZ FRONT END
-
-
+//QUIZ FRONT END.. JQuery stuff.
 
 var f_reloadQuiz = function(quiz) {
   quiz.refreshQuiz();
@@ -84,11 +82,42 @@ $(function() {
   quiz1.nextQuestion();
   f_reloadQuiz(quiz1);
 
+  //Hide the cover when quiz is started;
+  $('#cover-button').click(function() {
+    $('#answers').animate({
+        opacity: 0
+      }, 600, function() {
+        $('#answers').hide();
+      });
+    $('#quiz-cover').animate({
+        opacity: 0
+      }, 600, function(){ //animation complete
+        $('#quiz-cover').hide();
+        $('#quiz-wrap').css("top",  0);
+    });
+  });
+
+  //Return button functionality
+
+  $('#return-button').click(function() {
+
+    //Show answers again.
+    $('#answers').show(function() {
+      $('#answers').animate({opacity: 1}, 600);
+    });
+
+    //Cover quiz again.
+    $('#quiz-cover').show(function() {
+      $('#quiz-cover').animate({opacity: 1}, 600);
+      $('#quiz-wrap').css("top",  "-400px");
+    });
+
+  });
+
 
   $('#quiz-form').on('submit', function(e) {
 
     console.log("Quiz Submitted");
     e.preventDefault();
   });
-
 });

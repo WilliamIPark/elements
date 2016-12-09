@@ -5,6 +5,7 @@ body {
   display: flex;
 }
 
+
 ::selection {
   background: #348899; /* WebKit/Blink Browsers */
   color: white;
@@ -109,17 +110,18 @@ body {
 
 .flex-right {
   display: flex;
-  flex-direction: row-reverse;
   width: 100%;
+  justify-content: flex-end;
 }
 
 #main-article {
-  width:50%;
+  width:56%;
   padding: 4em 0;
 }
 
 #main-article header {
   margin-bottom: 2em;
+
 }
 
 #main-article section header {
@@ -128,10 +130,11 @@ body {
 }
 
 #main-article section {
-  width: 75%;
+  margin-right: 4em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
 }
 
 .full-width {
@@ -207,6 +210,7 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 10;
+  border-radius: 10px;
 }
 
 #user-box p {
