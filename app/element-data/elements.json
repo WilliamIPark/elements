@@ -1,0 +1,67 @@
+{
+  "helium": {
+    "data": {
+      "name": "Helium",
+      "symbol": "He",
+      "atomic": 2,
+      "electrons": 2,
+      "protons": 2,
+      "state": "Gas",
+      "colour": "Colourless",
+      "use": "Helium is used to make the balloons at parties float, and to take hot air balloons into the sky! It is also used to cool down very hot parts in spaceships.",
+      "character": "Not much to see, feel, or smell here! Helium is a light, odorless and colourless element."
+    }
+  },
+  "lithium": {
+    "data": {
+      "name": "Lithium",
+      "symbol": "Li",
+      "atomic": 3,
+      "electrons": 3,
+      "protons": 3,
+      "state": "Solid Metal",
+      "colour": "Silvery",
+      "use": "Lithium is used in rechargable batteries, and also to create aircraft parts! In the digital age it is all around us.",
+      "character": "Lithium is soft and silvery white and it is the least dense of metals. It's also highly reactive. If it is burning well, the flame becomes a bright white colour."
+    }
+  },
+  "hydrogen": {
+    "data": {
+      "name": "Hydrogen",
+      "symbol": "H",
+      "atomic": 1,
+      "electrons": 1,
+      "protons": 1,
+      "state": "Gas",
+      "colour": "Colourless",
+      "use": "Hydrogen is used as a rocket fuel. It powered the Space Shuttle's lift-off and ascent into the skies!",
+      "character": "Hydrogen is the simpliest element of all, and also the lightest. It is the most common element in the Universe."
+    }
+  },
+  "sodium": {
+    "data": {
+      "name": "Sodium",
+      "symbol": "Na",
+      "atomic": 11,
+      "electrons": 11,
+      "protons": 11,
+      "state": "Solid",
+      "colour": "Silvery-white",
+      "use": "Sodium is often used in the process to make glass. It's also a very important element in fertilizers, which help farmers grow their crops!",
+      "character": "Sodium is a soft, silvery-white metal. It is soft enough to cut with a coin. When in water sodium floats and also reacts violently!"
+    }
+  },
+  "carbon": {
+    "data": {
+      "name": "Carbon",
+      "symbol": "C",
+      "atomic": 6,
+      "electrons": 6,
+      "protons": 6,
+      "state": "Solid",
+      "colour": "Black (Graphite), Transparent (Diamond)",
+      "use": "Carbin is used in lots of ways. As diamond it is used as jewlery, or even as parts for drills, as diamond is so hard. As graphite it is used for pencil tips! It can even be a fuel in the form of coal!",
+      "character": "Carbon exists with several different structures. It can appear as diamond, graphite, and more! Interestingly graphite is very soft, and diamond is one of the hardest naturally occuring substance."
+    }
+  }
+}

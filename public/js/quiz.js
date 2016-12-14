@@ -84,16 +84,15 @@ $(function() {
 
   //Hide the cover when quiz is started;
   $('#cover-button').click(function() {
-    $('#answers').animate({
+    $('.answers').animate({
         opacity: 0
-      }, 600, function() {
-        $('#answers').hide();
+      }, 300, function() {
+        //$('.answers').hide();
       });
     $('#quiz-cover').animate({
         opacity: 0
-      }, 600, function(){ //animation complete
+      }, 300, function(){ //animation complete
         $('#quiz-cover').hide();
-        $('#quiz-wrap').css("top",  0);
     });
   });
 
@@ -102,14 +101,13 @@ $(function() {
   $('#return-button').click(function() {
 
     //Show answers again.
-    $('#answers').show(function() {
-      $('#answers').animate({opacity: 1}, 600);
-    });
+    //$('.answers').show(function() {
+    $('.answers').animate({opacity: 1}, 300);
+    //});
 
     //Cover quiz again.
     $('#quiz-cover').show(function() {
-      $('#quiz-cover').animate({opacity: 1}, 600);
-      $('#quiz-wrap').css("top",  "-400px");
+      $('#quiz-cover').animate({opacity: 1}, 300);
     });
 
   });

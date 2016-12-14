@@ -1,0 +1,51 @@
+.two-columns {
+  display: flex;
+  flex-direction: row !important;
+  justify-content: flex-start !important;
+}
+
+.gutter-right {
+  margin-right: 1em;
+}
+
+.gutter-left {
+  margin-left: 1em;
+}
+
+.details-panel {
+  border: 4px solid #343642;
+  border-radius: 10px;
+  height: fit-content;
+}
+
+.give-margin {
+  margin: 2em;
+}
+
+.details-panel ul {
+  list-style: none;
+  text-indent: 0;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.details-panel ul li{
+  list-style: none;
+  text-indent: 0;
+  padding: 0.5em 2em;
+  border-top: 4px solid #343642;
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.2s ease;
+}
+
+.details-panel ul li:hover {
+  background: #343642;
+  color: white;
+}
+
+
+
+.details-panel ul li span {
+  text-align: right;
+}

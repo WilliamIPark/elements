@@ -1,0 +1,147 @@
+html
+  head
+    // Meta information
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Lets Learn Elements
+
+    // Stylesheets
+    link(rel='stylesheet', type='text/css', href='../css/main.css')
+    link(rel='stylesheet', type='text/css', href='../css/details.css')
+    link(rel='stylesheet', type='text/css', href='../css/type.css')
+    link(rel='stylesheet', type='text/css', href='../css/animate.css')
+    link(rel='stylesheet', type='text/css', href='../css/atom-structure.css')
+    link(rel='stylesheet', type='text/css', href='../css/quiz.css')
+
+    //JQuery
+    script(src='../js/jquery-3.1.1.min.js')
+
+    //Quiz
+    script(src="../js/quiz.js")
+
+    // Typekit
+    script(src='https://use.typekit.net/fvf8ojr.js')
+    script.
+      try{Typekit.load({ async: true });}catch(e){}
+
+  body
+    aside#user-box.animated.fadeInDown
+      if firstname != null
+        p#welcome= "Welcome, " + firstname +"!"
+      else
+        p#welcome Welcome, scientist!
+      if points != null
+        p#points= "Points: " + points
+    div#atom-large-wrap
+      div#atom-wrap.animated.zoomIn
+        div#nucleus
+        img(src="../img/inner-ring.png")#inner-ring
+        img(src="../img/outer-ring.png")#outer-ring
+    div#slanted-bg.animated.fadeInRight
+    div.flex-right.animated.fadeInRight
+      main#main-article
+        header
+          h1.uppercase Lets Learn Elements
+          h2.uppercase= data.data.name
+        article
+          header
+            h3
+              a(href="/learn") Return to Element Selection
+          section.two-columns
+            aside.gutter-right.details-panel.answers
+              //ATOM STRUCTURE
+              if data.data.name == "Helium"
+                div.full-structure.give-margin
+                  div.ring-3.spin
+                    div.small-nucleus
+                    div.atoms
+                      div.atom.ring-3-top
+                      div.atom.ring-3-bottom
+
+              if data.data.name == "Lithium"
+                div.full-structure.give-margin
+                  div.ring-3.spin
+                    div.atoms
+                      div.atom.ring3-bottomright
+                    div.ring-1.spin-reverse
+                      div.small-nucleus
+                      div.atoms
+                        div.atom.ring1-top
+                        div.atom.ring1-bottom
+              if data.data.name == "Hydrogen"
+                div.full-structure.give-margin
+                  div.ring-3.spin
+                    div.small-nucleus
+                    div.atoms
+                      div.atom.ring-3-top
+              if data.data.name == "Sodium"
+                div.full-structure.give-margin
+                  div.ring-3.spin
+                    div.atoms
+                      div.atom#sodium-ring3-top
+                    div.ring-2.spin-reverse
+                      div.atoms
+                        div.atom#sodium-ring2-top1
+                        div.atom#sodium-ring2-top2
+                        div.atom#sodium-ring2-right1
+                        div.atom#sodium-ring2-right2
+                        div.atom#sodium-ring2-bottom1
+                        div.atom#sodium-ring2-bottom2
+                        div.atom#sodium-ring2-left1
+                        div.atom#sodium-ring2-left2
+                      div.ring-0.spin-triple
+                        div.atoms
+                          div.atom#sodium-ring0-top
+                          div.atom#sodium-ring0-bottom
+                        div.small-nucleus
+              if data.data.name == "Carbon"
+                div.full-structure.give-margin
+                  div.ring-3.spin
+                    div.atoms
+                      div.atom#carbon-top
+                      div.atom#carbon-right
+                      div.atom#carbon-bottom
+                      div.atom#carbon-left
+                    div.ring-1.spin-reverse
+                      div.small-nucleus
+                      div.atoms
+                        div.atom.ring1-top
+                        div.atom.ring1-bottom
+
+              ul
+                li
+                  strong Atomic Number:
+                  span= data.data.atomic
+                li
+                  strong Electrons:
+                  span= data.data.electrons
+                li
+                  strong Protons:
+                  span= data.data.protons
+                li
+                  strong State:
+                  span= data.data.state
+                li
+                  strong Colour:
+                  span= data.data.colour
+            div.gutter-left
+              section.answers
+                header
+                  h3 Uses
+                p= data.data.use
+              section.answers
+                header
+                  h3 Characteristics
+                p= data.data.character
+              section
+                header
+                  h3 Quiz
+                div#quiz-wrap
+                  div#quiz-cover
+                    button#cover-button Start Quiz!
+                  p#question How many different elements are there?
+                    form#quiz-form
+                      ul
+                        li
+                          input(type="submit", value="Submit")
+                          button#return-button(type="button") Return

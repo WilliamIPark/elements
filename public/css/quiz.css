@@ -97,11 +97,11 @@
 
 #quiz-wrap {
   position: relative;
-  top: -400px;
+  margin-bottom: 10em;
 }
 
 #quiz-cover {
-  position: relative;
+  position: absolute;
   left:0;
   top: 0;
   background: #343642;

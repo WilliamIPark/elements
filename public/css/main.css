@@ -5,6 +5,17 @@ body {
   display: flex;
 }
 
+a {
+  color: #348899;
+}
+
+a:visited {
+  color: #348899;
+}
+
+a:hover {
+  color: #216977;
+}
 
 ::selection {
   background: #348899; /* WebKit/Blink Browsers */
