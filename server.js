@@ -64,7 +64,17 @@ app.get('/learn', function(req, res){
 
 //Individual element page. Data gets passed in to the page from a json file.
 app.get('/learn/:element', function(req,res){
-  res.render('details', {data: data[req.params.element]});
+  //If there is a profile available in the cookie, send that data to the page.
+  if(req.cookies.firstname != null) {
+      res.render('details', {
+        firstname: req.cookies.firstname,
+        points: req.cookies.points,
+        data: data[req.params.element]
+      });
+  } else {
+    //Otherwise send nothing.
+    res.render('details', {data: data[req.params.element]});
+  }
 });
 
 //Start server
