@@ -32,6 +32,10 @@ html
         p#welcome Welcome, scientist!
       if points != null
         p#points= "Points: " + points
+      footer
+        h3
+          a(href="/learn") Return to Element Selection
+
     div#atom-large-wrap
       div#atom-wrap.animated.zoomIn
         div#nucleus
@@ -41,17 +45,14 @@ html
     div.flex-right.animated.fadeInRight
       main#main-article
         header
-          h1.uppercase Lets Learn Elements
-          h2.uppercase= data.data.name
+          h2.uppercase Lets Learn Elements
+          h1(class="responsive-header uppercase txt-" + data.data.name)= data.data.name
         article
-          header
-            h3
-              a(href="/learn") Return to Element Selection
           section.two-columns
-            aside.gutter-right.details-panel.answers
+            aside(class="gutter-right details-panel answers bg-" + data.data.name)
               //ATOM STRUCTURE
               if data.data.name == "Helium"
-                div.full-structure.give-margin
+                div.full-structure.give-margin.white
                   div.ring-3.spin
                     div.small-nucleus
                     div.atoms
@@ -59,7 +60,7 @@ html
                       div.atom.ring-3-bottom
 
               if data.data.name == "Lithium"
-                div.full-structure.give-margin
+                div.full-structure.give-margin.white
                   div.ring-3.spin
                     div.atoms
                       div.atom.ring3-bottomright
@@ -69,13 +70,13 @@ html
                         div.atom.ring1-top
                         div.atom.ring1-bottom
               if data.data.name == "Hydrogen"
-                div.full-structure.give-margin
+                div.full-structure.give-margin.white
                   div.ring-3.spin
                     div.small-nucleus
                     div.atoms
                       div.atom.ring-3-top
               if data.data.name == "Sodium"
-                div.full-structure.give-margin
+                div.full-structure.give-margin.white
                   div.ring-3.spin
                     div.atoms
                       div.atom#sodium-ring3-top
@@ -95,7 +96,7 @@ html
                           div.atom#sodium-ring0-bottom
                         div.small-nucleus
               if data.data.name == "Carbon"
-                div.full-structure.give-margin
+                div.full-structure.give-margin.white
                   div.ring-3.spin
                     div.atoms
                       div.atom#carbon-top
@@ -107,7 +108,7 @@ html
                       div.atoms
                         div.atom.ring1-top
                         div.atom.ring1-bottom
-
+              //ATOM DETAILS LIST
               ul
                 li
                   strong Atomic Number:
@@ -137,7 +138,7 @@ html
                 header
                   h3 Quiz
                 div#quiz-wrap
-                  div#quiz-cover
+                  div(class="bg-" + data.data.name)#quiz-cover
                     button#cover-button Start Quiz!
                   p#question How many different elements are there?
                     form#quiz-form

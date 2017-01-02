@@ -1,3 +1,11 @@
+.white .ring-3, .white .ring-2, .white .ring-1, .white .ring-0{
+  border: 4px solid white;
+}
+
+.white .small-nucleus, .white .atom{
+  background-color: white;
+}
+
 #element-list {
   display: flex;
   flex-wrap: wrap;
@@ -25,6 +33,33 @@
   transition: all 0.2s ease;
 }
 
+#element-list a:hover li {
+  transform:scale(1.2);
+  border: 4px solid transparent;
+  z-index: 10;
+}
+
+/* HOVER COLOURS FOR ELEMENTS */
+
+.helium:hover {
+  background-color: #FBC264;
+}
+
+.lithium:hover, .sodium:hover {
+  background-color: #F194BE;
+}
+
+.hydrogen:hover {
+  background-color: #47CDC6;
+}
+
+.carbon:hover {
+  background-color: #804997;
+}
+
+/*----------------------------*/
+
+
 #element-list li h3 {
   padding-top: 20px;
   transition: all 0.2s ease;
@@ -46,7 +81,6 @@
   border-radius: 20px;
   position: relative;
   transition: all 0.2s ease;
-
 }
 
 .ring-3 {
@@ -227,11 +261,6 @@
 }
 
 
-
-#element-list a:hover li {
-  transform:scale(1.2);
-  background-color: #343642;
-}
 
 #element-list a:hover li div .ring-3 {
   border: 4px solid white;

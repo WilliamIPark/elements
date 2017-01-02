@@ -1,3 +1,43 @@
+/* BG COLOURS FOR ELEMENTS */
+
+.bg-helium {
+  background-color: #FBC264 !important;
+}
+
+.bg-lithium, .bg-sodium{
+  background-color: #F194BE !important;
+}
+
+.bg-hydrogen {
+  background-color: #47CDC6 !important;
+}
+
+.bg-carbon {
+  background-color: #804997 !important;
+}
+
+/*----------------------------*/
+
+/* HEADER BORDER COLOURS FOR ELEMENTS */
+
+.hdr-helium {
+  border-bottom: 3px solid #FBC264 !important;
+}
+
+.hdr-lithium, .hdr-sodium{
+  border-bottom: 3px solid #F194BE !important;
+}
+
+.hdr-hydrogen {
+  border-bottom: 3px solid #47CDC6 !important;
+}
+
+.hdr-carbon {
+  border-bottom: 3px solid #804997 !important;
+}
+
+/*----------------------------*/
+
 .two-columns {
   display: flex;
   flex-direction: row !important;
@@ -13,7 +53,7 @@
 }
 
 .details-panel {
-  border: 4px solid #343642;
+
   border-radius: 10px;
   height: fit-content;
 }
@@ -33,18 +73,17 @@
   list-style: none;
   text-indent: 0;
   padding: 0.5em 2em;
-  border-top: 4px solid #343642;
+  border-top: 4px solid white;
   display: flex;
   justify-content: space-between;
   transition: all 0.2s ease;
+  color: white;
 }
 
 .details-panel ul li:hover {
   background: #343642;
   color: white;
 }
-
-
 
 .details-panel ul li span {
   text-align: right;
