@@ -44,6 +44,11 @@
   justify-content: flex-start !important;
 }
 
+.responsive-img {
+  width: 100%;
+  height: auto;
+}
+
 .gutter-right {
   margin-right: 1em;
 }
