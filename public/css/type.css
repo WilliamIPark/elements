@@ -1,3 +1,27 @@
+/* TEXT COLOURS FOR ELEMENTS */
+
+.txt-helium {
+  color: #FBC264 !important;
+}
+
+.txt-lithium, .txt-sodium{
+  color: #F194BE !important;
+}
+
+.txt-hydrogen {
+  color: #47CDC6 !important;
+}
+
+.txt-carbon {
+  color: #804997 !important;
+}
+
+/*----------------------------*/
+
+.responsive-header{
+  font-size: 7vw;
+}
+
 h1, h2{
     font-family: "futura-pt", sans-serif;
 }

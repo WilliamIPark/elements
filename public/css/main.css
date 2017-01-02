@@ -210,7 +210,7 @@ a:hover {
   top: 0;
   left: 0;
   width: 300px;
-  height: 60px;
+  /*height: 60px;*/
   background-color: white;
   box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.9);
   overflow-x: hidden;
@@ -231,6 +231,17 @@ a:hover {
 #user-box p:first-of-type {
   color: #348899
 }
+
+#user-box h3 {
+  font-size: 21px;
+}
+
+#user-box footer {
+  border-top: 1px solid #F1F1F1;
+  padding-top: 5px;
+  margin-top: 5px;
+}
+
 
 #atom-large-wrap {
   position: fixed;
