@@ -289,9 +289,35 @@ a:hover {
   animation-timing-function: linear;
 }
 
-
-
 @keyframes rotate {
     from {transform: rotate(0deg);}
     to {transform: rotate(360deg);}
+}
+
+/* MEDIA QUERIES FOR TABLET */
+
+@media only screen
+  and (max-width: 1024px){
+    body {
+      background-color: white;
+    }
+
+    #slanted-bg, #atom-large-wrap {
+      display: none;
+    }
+
+    #main-content-area {
+      width: 100%;
+      justify-content: center;
+      background-color: white;
+      margin: 0 6em;
+    }
+
+    #main-article {
+      width: 100%;
+    }
+
+    #user-box {
+      display: none;
+    }
 }
