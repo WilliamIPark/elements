@@ -108,6 +108,30 @@ a:hover {
   cursor:not-allowed;
 }
 
+#info-box {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  padding: 20px;
+  background-color: rgba(0,0,0,0.2);
+}
+
+#info-box h3 {
+  color: white;
+  font-size: 22px;
+}
+
+#info-box p {
+  color: white;
+  font-size: 18px;
+}
+
+#info-box a {
+  font-family: "mr-eaves-modern", sans-serif;
+}
+
+
 #slanted-bg {
   position: fixed;
   right: -10%;
