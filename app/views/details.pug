@@ -42,7 +42,7 @@ html
         img(src="../img/inner-ring.png")#inner-ring
         img(src="../img/outer-ring.png")#outer-ring
     div#slanted-bg.animated.fadeInRight
-    div.flex-right.animated.fadeInRight
+    div#main-content-area.flex-right.animated.fadeInRight
       main#main-article
         header
           h2.uppercase Lets Learn Elements
@@ -140,10 +140,15 @@ html
                   h3 Quiz
                 div#quiz-wrap
                   div(class="bg-" + data.data.name)#quiz-cover
+                    div#results
+                      h3= "Your results are in, " + firstname + "!"
+                      p You got
+                      h1#result-number 0
+                      p answers correct!
                     button#cover-button Start Quiz!
                   p#question How many different elements are there?
                     form#quiz-form
                       ul
                         li
-                          input(type="submit", value="Submit")
+                          input#submit-button(type="submit", value="Submit")
                           button#return-button(type="button") Return

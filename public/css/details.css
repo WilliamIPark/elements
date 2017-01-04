@@ -40,8 +40,8 @@
 
 .two-columns {
   display: flex;
-  flex-direction: row !important;
-  justify-content: flex-start !important;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
 .responsive-img {
@@ -57,8 +57,13 @@
   margin-left: 1em;
 }
 
-.details-panel {
+.gutter-left section {
+  flex-direction: column;
+}
 
+.details-panel {
+  display: flex;
+  flex-direction: column;
   border-radius: 10px;
   height: fit-content;
 }
@@ -92,4 +97,34 @@
 
 .details-panel ul li span {
   text-align: right;
+}
+
+/* MEDIA QUERY TO COLLAPSE TWO COLUMN LAYOUT*/
+@media only screen
+  and (max-width: 1350px){
+    .two-columns {
+      flex-direction: column;
+    }
+
+    .details-panel{
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .details-panel ul li:first-of-type {
+      border-top: none;
+    }
+}
+
+/* MEDIA QUERIES FOR DETAILS PANEL COLLAPSE */
+
+@media only screen
+  and (max-width: 840px){
+    .details-panel{
+      flex-direction: column;
+    }
+
+    .details-panel ul li:first-of-type {
+      border-top: 4px solid white;
+    }
 }
