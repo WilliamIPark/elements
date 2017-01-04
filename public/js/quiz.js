@@ -42,6 +42,100 @@ var helium_questions = [helium_q1, helium_q2, helium_q3];
 var helium = new Quiz("elements", helium_questions);
 
 
+//Lithium///////////////////////////////////////////////////////////////
+var lithium_q1 = {question: "If burning well, what colour is Lithium's Flame?",
+  answers: [
+    "Red",
+    "Orange",
+    "White"
+  ],
+  correct: "White"
+};
+
+var lithium_q2 = {question: "What colour is Lithium?",
+  answers: [
+    "White",
+    "Silvery",
+    "Colourless"
+  ],
+  correct: "Silvery"
+};
+
+var lithium_q3 = {question: "What property does Lithium have the least of?",
+  answers: [
+    "Electrons",
+    "Density",
+    "Uses"
+  ],
+  correct: "Density"
+};
+
+var lithium_questions = [lithium_q1, lithium_q2, lithium_q3];
+var lithium = new Quiz("elements", lithium_questions);
+
+//Hydrogen///////////////////////////////////////////////////////////////
+var hydrogen_q1 = {question: "What state is hydrogen?",
+  answers: [
+    "Gas",
+    "Liquid",
+    "Solid"
+  ],
+  correct: "Gas"
+};
+
+var hydrogen_q2 = {question: "How much hydrogen is there in the universe?",
+  answers: [
+    "Not very much.",
+    "A lot, but there is more lithium.",
+    "It is the most common element!"
+  ],
+  correct: "It is the most common element!"
+};
+
+var hydrogen_q3 = {question: "Which is true?",
+  answers: [
+    "Lithium is lighter than Hydrogen.",
+    "Hydrogen is the lightest element of all.",
+    "Hydrogen is a silvery colour."
+  ],
+  correct: "Hydrogen is the lightest element of all."
+};
+
+var hydrogen_questions = [hydrogen_q1, hydrogen_q2, hydrogen_q3];
+var hydrogen = new Quiz("elements", hydrogen_questions);
+
+//Sodium///////////////////////////////////////////////////////////////
+var sodium_q1 = {question: "Which one of these is a use of sodium?",
+  answers: [
+    "Rocket fuel",
+    "Fertilizers",
+    "Making plastic"
+  ],
+  correct: "Fertilizers"
+};
+
+var sodium_q2 = {question: "What happens when sodium touches water?",
+  answers: [
+    "A few bubbles.",
+    "Nothing.",
+    "A violent reaction!"
+  ],
+  correct: "A violent reaction!"
+};
+
+var sodium_q3 = {question: "How many protons does sodium have?",
+  answers: [
+    "9",
+    "10",
+    "11"
+  ],
+  correct: "11"
+};
+
+var sodium_questions = [sodium_q1, sodium_q2, sodium_q3];
+var sodium = new Quiz("elements", sodium_questions);
+
+
 //Carbon///////////////////////////////////////////////////////////////
 var carbon_q1 = {question: "How many protons is in Carbon?",
   answers: [
@@ -230,6 +324,8 @@ $(function() {
           $('#cover-button').html('Restart Quiz')
           $('#quiz-cover').animate({opacity: 1}, 100);
           $('#results').css("display", "flex");
+          Cookies.set('points', parseInt(Cookies.get('points')) + score*100);
+          $('#points').text("Points: " + Cookies.get('points'));
         });
 
         //Quiz is FINISHED. Also display answers again.
