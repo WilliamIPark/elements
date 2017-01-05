@@ -31,7 +31,7 @@ var helium_q2 = {question: "What is helium useful for?",
 
 var helium_q3 = {question: "What does Helium smell like?",
   answers: [
-    "Rotton Eggs",
+    "Rotten Eggs",
     "Nothing",
     "Garlic"
   ],
@@ -271,6 +271,7 @@ $(function() {
         $('input[name='+ url +']').removeClass("incorrect correct");
         $('#submit-button').attr('value', 'Submit');
         $('input[name='+ url +']').prop('disabled', false);
+        score = 0;
         submitState = 0;
         window[url].quizPosition = 0;
         f_reloadQuiz(window[url]);
